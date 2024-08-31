@@ -1,9 +1,72 @@
 <html>
 
-<head></head>
+<head>
+    <!--FONT AWESOME IMPORT-->
+    <script src="https://kit.fontawesome.com/2e90750351.js" crossorigin="anonymous"></script>
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--    Roboto Family
+                FONT NAMES:
+                Roboto
+                Roboto Condensed
+                Roboto Slab
+                Roboto Mono
+                Roboto Serif
+            -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!--    Handwritten fonts
+                FONT NAMES:
+                Caveat
+                Kalam
+                Permanent Marker
+                Merienda
+            -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kalam:wght@300;400;700&family=Merienda:wght@300..900&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
+    <!--STYLESHEET IMPORT-->
+    <link rel="stylesheet" href="./STYLE_character-builder.css">
+</head>
 
 <body>
-    <h1>Testing</h1>
+    <div id="content">
+        <div id="page">
+            <div class="line" id="vert"></div>
+            <div class="line" id="hori"></div>
+            <!-- TOP ROW -- Character Name; Race, Class & Level; Height & Weight; Hit Die; -->
+            <div class="row" id="one">
+                <div class="detail" id="name">
+                    <div class="type-placeholder">Testing Here</div>
+                    <div class="label">Character Name</div>
+                </div>
+                <div class="detail" id="rcl">
+                    <div class="type-placeholder">Testing Here</div>
+                    <div class="label">Race, Class & Level</div>
+                </div>
+                <div class="detail" id="size">
+                    <div class="type-placeholder">Size</div>
+                    <div class="label">Height & Weight</div>
+                </div>
+                <div class="detail" id="hd">
+                    <div class="type-placeholder">0d0</div>
+                    <div class="label">Hit Die</div>
+                </div>
+            </div>
+            <!-- MIDDLE ROW -- ABILITIES; Actions & Class Resources; Hit Points+; Initiative & Speed; -->
+            <div class="row" id="two">
+                <div class="czone edge">Left</div>
+                <div class="czone center">
+                    <div style="height:150px">Middle</div>
+                </div>
+                <div class="czone edge">Right</div>
+            </div>
+            <!-- BOTTOM  ROW -- Skills; Wounds;-->
+            <div class="row" id="three"></div>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -1,0 +1,165 @@
+
+    /*
+    BELOW: VARIABLES FOR STYLING
+    */
+    :root {
+        --white: 255, 255, 255;
+        --black: 0, 0, 0;
+        --handwriting: "Merienda";
+    }
+
+    /*
+    ABOVE: VARIABLES
+    BELOW: PAGE
+    */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: rgba(var(--black), 0.25);
+    }
+
+    #content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #page {
+        /*size & positioning*/
+        width: 297mm;
+        height: 210mm;
+        position: relative;
+        /*style*/
+        background: rgba(var(--white), 1);
+        outline: 1px solid rgba(var(--white), 0.25);
+        box-shadow: 0mm 2mm 10mm 4mm rgba(var(--black), 0.1);
+        /*content positioning*/
+        padding: 10mm;
+        display: flex;
+        flex-direction: column;
+        justify-content: column;
+        align-items: center;
+    }
+
+    .line {
+        display: block;
+        content: "";
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(var(--black), 0.05);
+    }
+
+    .line#vert {
+        left: 50%;
+        height: 100%;
+        width: 1px;
+    }
+
+    .line#hori {
+        top: 50%;
+        width: 100%;
+        height: 1px;
+    }
+
+    /*
+    ABOVE: PAGE
+    BELOW: ROW
+    */
+    .row {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        /*testing*/
+        border: 1px dotted rgba(var(--black), 0.1);
+        min-height: 10px;
+        z-index: 1;
+    }
+
+    .row#two, .row#three{
+        min-height: 48px;
+        justify-content: center;
+        padding: 0 10mm;
+    }
+    .row#two{
+        gap: 7mm;
+    }
+    .row#three{
+        gap: 5mm;
+    }
+
+    .row#two::before, .row#three::before{
+        display:block;
+        content:"";
+        position:absolute;
+        width:100%;
+        height: 32px;
+        background: rgba(var(--black), 0.5);
+        z-index: -1;
+    }
+
+    /*
+    ABOVE: ROW
+    BELOW: TOP ROW
+    */
+    .detail {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    /* detail spacing design.*/
+    .detail#name {
+        flex-basis: 22%;
+    }
+
+    .detail#rcl {
+        flex-basis: 42%;
+    }
+
+    .detail#size {
+        flex-basis: 28.5%;
+    }
+
+    .detail#hd {
+        flex-basis: 7.5%;
+    }
+
+    .detail .type-placeholder {
+        width: 100%;
+        border-bottom: 2px solid rgba(var(--black), 0.1);
+        font-family: var(--handwriting);
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .detail .label {
+        font-family: "Roboto Condensed";
+        text-transform: uppercase;
+        font-weight: 700;
+        color: rgba(var(--black), 0.25);
+        font-size: 14px;
+        line-height: 14px;
+        margin-bottom:-14px;
+    }
+    /* MIDDLE ROW */
+    .czone {
+        border: 1px dashed rgba(var(--black), 0.1);
+        background: white;
+    }
+    .czone.center{
+        flex-basis: 30%;
+    }
+    .czone.edge{
+        flex-basis: 35%;
+    }
